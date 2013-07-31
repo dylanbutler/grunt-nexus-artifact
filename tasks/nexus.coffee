@@ -22,7 +22,7 @@ module.exports = (grunt) ->
 		processes = []
 
 		if !@args.length or @args.indexOf('fetch') > -1
-			_.each options.fetch, (cfg) ->
+			_.each @data.fetch, (cfg) ->
 				# get the base nexus path
 				_.extend cfg, NexusArtifact.fromString(cfg.id) if cfg.id
 
